@@ -1,6 +1,1 @@
 ErrorDocument 404 http://gc200310426.computerstudi.es/sem2/COMP1006/admin/404.php
-
-
-
-Good.  The only things missing are update (it adds a new user instead) 
-and a check for duplicate users before inserting a new one.

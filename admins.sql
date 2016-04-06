@@ -1,7 +1,7 @@
 USE gc200310426;
 
 CREATE TABLE admins (
-user_id VARCHAR(10),
+user_id INTEGER AUTO_INCREMENT PRIMARY KEY,
 email VARCHAR(100),
 password CHAR(128)
 );

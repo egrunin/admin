@@ -59,7 +59,7 @@ try {
         
         // add the registrant_id if available
         if (!empty($user_id)) {
-            $cmd -> bindParam(':user_id', $user_id, PDO::PARAM_STR, 10);
+            $cmd -> bindParam(':user_id', $user_id, PDO::PARAM_INT);
         }
         
         // save
