@@ -18,7 +18,7 @@
         </i>Admins X</a>
     
     <ul class="nav navbar-nav navbar-right">
-    <li><a href="adminregister.php" title="Register Admin X">Register</a></li>      
+    <li><a href="register.php" title="Register Admin X">Register</a></li>      
     <li><a href="admins.php" title="Admin List">Admins</a></li>
     <li><a href="adminlogin.php" title="Admin X Log In">Login</a></li>
     </ul>

@@ -5,7 +5,7 @@ require('header.php');
 //random user id 
 $user_id = rand(1000000000,9999999999);
 
-// store the form inputes in variables
+// store the form inputs in variables
 $email = $_POST['email'];
 $password = $_POST['password'];
 $confirm = $_POST['confirm'];

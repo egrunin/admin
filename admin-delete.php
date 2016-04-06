@@ -16,7 +16,7 @@ try {
         $sql = "DELETE FROM admins WHERE user_id = :user_id";
 
         $cmd = $conn->prepare($sql);
-        $cmd->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        $cmd->bindParam(':user_id', $user_id, PDO::PARAM_STR, 10);
         $cmd->execute();
 
         // disconnect

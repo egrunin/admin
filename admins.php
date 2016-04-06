@@ -12,7 +12,7 @@ try {
     require('db.php'); 
 
     // prepare the query
-    $sql = "SELECT * FROM admins;";
+    $sql = "SELECT * FROM admins";
     $cmd = $conn -> prepare($sql);
 
     // run the query and store the results
@@ -33,7 +33,7 @@ try {
     foreach($admins as $admin) {
         echo '<tr>
                 <td>' . $admin['email'] . '</td>
-                <td><a href="adminregister.php?user_id=' . $admin['user_id'] . '" title="Edit">Edit</a></td>
+                <td><a href="register.php?user_id=' . $admin['user_id'] . '" title="Edit">Edit</a></td>
                 <td><a href="admin-delete.php?user_id=' . $admin['user_id'] . '" title="Delete" class="confirmation">Delete</a></td>
               </tr>';
     }
