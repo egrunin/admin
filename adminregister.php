@@ -5,12 +5,17 @@ $page_title = 'Register Admin';
 require('header.php'); ?>
 
 <?php
+//initialize empty variable
+$user_id = null;
+$email = null;
+$password = null;
+
 //check for user id
-if (is_numeric($_GET['user_id'])) {
+if ((!empty($_GET['user_id'])) && (is_numeric($_GET['user_id']))) {
     // store in a variable
     $user_id = $_GET['user_id'];
     //connect
-    $conn = new PDO('mysql:host=sql.computerstudi.es;dbname=gc200310426', 'gc200310426', 'cAWivcDH');
+    require('db.php');
     //select all the data for the selected user
     $sql = "SELECT * FROM admins WHERE user_id = :user_id";
     $cmd = $conn->prepare($sql);
@@ -24,9 +29,9 @@ if (is_numeric($_GET['user_id'])) {
         $user_id  = $admin['user_id'];
         $email = $admin['email'];
         $password = $admin['password'];
-      }
     }
-  ?>
+}
+?>
 
 <h1>Administrator Registration</h1>
 <form method="post" action="adminregister-save.php" class="form-horizontal">
